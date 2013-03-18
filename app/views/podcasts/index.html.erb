@@ -1,0 +1,15 @@
+<h1>Digital Tomatoes: Podcasts</h1>
+
+<h1><%= link_to "Add new podcast", new_podcast_path %></h1>
+<ul>
+
+<% @podcasts.each do |podcast| %>
+  <li>
+    <h2><%= link_to podcast.name, podcast_path(podcast.id) %></h2>
+    <%= link_to "Edit", edit_podcast_path(podcast) %>
+    <%= link_to "Delete", podcast_path(podcast), :confirm => 'Are you sure?', :method => :delete %>
+  </li>
+<%end%>
+
+</ul>
+

@@ -1,0 +1,23 @@
+<%= form_for @podcast  do |f| %>
+  <div>
+  <%= f.label :name %>:
+  <%= f.text_field :name %>
+  </div>
+  <div>
+  <%= f.label :body %>:
+  <%= f.text_area :body %>
+  </div>
+  <div>
+  <%= f.label :image %>:
+  <%= f.text_field :image %>
+  </div>
+  <div>
+  <%= f.label :url %>:
+  <%= f.text_field :url %>
+  </div>
+  <div>
+  <%= f.label :rating %>:
+  <%= f.text_field :rating %>
+  </div>
+  <%= f.submit %>
+<% end %>
