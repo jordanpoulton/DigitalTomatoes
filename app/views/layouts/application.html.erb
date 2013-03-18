@@ -7,8 +7,45 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="wrapper">
+<header>
+  <h1>digital tomatoes</h1>
+
+
+    <form action="" method="get">
+    <select>
+      <% @genres.each do |genre| %>
+      <option value="<%= genre.name %>"><%= genre.name %></option>
+      <% end %>
+    </select>
+    <input type="submit" value="go">
+  </form>
+
+  <form action="" method="post">
+    <input type="text" name="search" id="search">
+    <input type="submit" value="search">
+  </form>
+
+
+  <a href="">login</a>
+  <a href="">sign up</a>
+
+
+</header>
 
 <%= yield %>
 
+<footer>
+  <ul>
+    <li><%= link_to "Contact Us", main_contact_path %></li>
+  </ul>
+  <ul>
+    <li><%= link_to "About us", main_about_path%></li>
+  </ul>
+  <ul>
+    <li><a href="">copyright</a></li>
+  </ul>
+</footer>
+</div>
 </body>
 </html>

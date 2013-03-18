@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+["Arts", "Business", "Comedy", "Education", "Games/Hobbies", "Government/Orgs", "Health", "Kids/Family", "Music", "News/Politics", "Religion/Spirit", "Science/Medicine", "Society/Culture", "Sports/Recreation", "TV/Film", "Technology" ].each {|x| Genre.create(:name=> x)}
+
