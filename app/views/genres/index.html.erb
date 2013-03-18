@@ -1,0 +1,10 @@
+
+<ul>
+<% @genres.each do |genre| %>
+  <li><h2><%= genre.name %></h2>
+  <%= link_to "Edit", edit_genre_path(genre) %>
+  <%= link_to "Delete", genre_path(genre), :confirm => 'Are you sure?', :method => :delete %>
+
+  </li>
+<% end %>
+</ul>
