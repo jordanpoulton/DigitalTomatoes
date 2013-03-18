@@ -1,4 +1,5 @@
 class PodcastsController < ApplicationController
+
   def index
     @podcasts = Podcast.all
   end
@@ -9,9 +10,11 @@ class PodcastsController < ApplicationController
 
   def new
     @podcast = Podcast.new
+    @genres = Genre.all
   end
 
   def create
+    # debugger
     @podcast = Podcast.new(params[:podcast])
     @podcast.save
     redirect_to :action => 'index'
@@ -19,6 +22,7 @@ class PodcastsController < ApplicationController
 
   def edit
     @podcast = Podcast.find(params[:id])
+    @genres = Genre.all
   end
 
   def update

@@ -1,5 +1,11 @@
 DigitalTomatoes::Application.routes.draw do
 
+  get "main/index"
+
+  get "main/contact"
+
+  get "main/about"
+
 resources :podcasts
 resources :genres
 

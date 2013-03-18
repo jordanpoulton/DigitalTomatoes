@@ -1,0 +1,4 @@
+  <% @genres.each do |genre| %>
+    <%= check_box_tag "podcast[genre_ids][]", genre.id, @podcast.genres.include?(genre) %>
+  <%= genre.name %></p>
+  <% end %>

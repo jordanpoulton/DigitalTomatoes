@@ -1,0 +1,8 @@
+<h1> <%= "Browse #{genre} podcasts " %> </h1>
+
+  <ul>
+    <% @genre.podcasts.each do |podcast|%>
+    <li> <%= podcast.name %> </li>
+    <%end%>
+  </ul>
+
