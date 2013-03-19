@@ -8,7 +8,10 @@ DigitalTomatoes::Application.routes.draw do
   match '/genre' => 'main#genre'
   match '/search' => 'main#search'
 
-  resources :podcasts
+  resources :podcasts do
+    resources :reviews
+  end
+
   resources :genres
   resources :users
   resources :sessions

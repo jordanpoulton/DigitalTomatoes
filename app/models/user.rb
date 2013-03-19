@@ -3,6 +3,8 @@ require 'digest/sha1'
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :salt, :confirm_password
 
+  has_many :reviews
+
   def self.authenticate(email, password)
     user = find_by_email email
 
