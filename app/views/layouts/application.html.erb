@@ -9,11 +9,10 @@
 <body>
 <div id="wrapper">
 <header>
-  <h1>digital tomatoes</h1>
+  <h1><a href="/">digital tomatoes</a></h1>
 
-
-    <form action="" method="get">
-    <select>
+  <form id="genres" action="/genre" method="get">
+    <select name="genre">
       <% @genres.each do |genre| %>
       <option value="<%= genre.name %>"><%= genre.name %></option>
       <% end %>
@@ -21,26 +20,24 @@
     <input type="submit" value="go">
   </form>
 
-  <form action="" method="post">
+  <form id="search" action="/search" method="post">
     <input type="text" name="search" id="search">
     <input type="submit" value="search">
   </form>
 
-
-  <a href="">login</a>
-  <a href="">sign up</a>
-
-
+  <div id="account">
+    <a href="">login</a> <a href="">join</a>
+  </div>
 </header>
 
 <%= yield %>
 
 <footer>
   <ul>
-    <li><%= link_to "Contact Us", main_contact_path %></li>
+    <li><%= link_to "Contact Us", '/contact' %></li>
   </ul>
   <ul>
-    <li><%= link_to "About us", main_about_path%></li>
+    <li><%= link_to "About us", '/about' %></li>
   </ul>
   <ul>
     <li><a href="">copyright</a></li>

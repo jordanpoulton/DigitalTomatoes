@@ -1,0 +1,6 @@
+<h1><%= params[:genre] %></h1>
+<ul>
+<% @podcasts.each do |podcast| %>
+	<li><%= podcast.name %></li>
+<% end %>
+</ul>
