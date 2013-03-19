@@ -3,7 +3,11 @@ DigitalTomatoes::Application.routes.draw do
   root :to => "main#index"
 
   get "main/contact"
+  match '/contact' => 'main#contact'
+  match '/about' => 'main#about'
   get "main/genre"
+  match '/genre' => 'main#genre'
+  match '/search' => 'main#search'
   get "main/about"
 
 resources :podcasts
