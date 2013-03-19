@@ -12,6 +12,7 @@
   <h1><a href="/">digital tomatoes</a></h1>
 
   <form id="genres" action="/genre" method="get">
+
     <select name="genre">
       <% @genres.each do |genre| %>
       <option value="<%= genre.name %>"><%= genre.name %></option>
