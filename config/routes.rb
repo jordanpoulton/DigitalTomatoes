@@ -1,17 +1,17 @@
 DigitalTomatoes::Application.routes.draw do
 
+
   root :to => "main#index"
 
-  get "main/contact"
   match '/contact' => 'main#contact'
   match '/about' => 'main#about'
-  get "main/genre"
   match '/genre' => 'main#genre'
   match '/search' => 'main#search'
-  get "main/about"
 
-resources :podcasts
-resources :genres
+  resources :podcasts
+  resources :genres
+  resources :users
+  resources :sessions
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

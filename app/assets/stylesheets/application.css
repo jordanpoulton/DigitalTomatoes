@@ -12,6 +12,11 @@
  *= require_tree .
  */
 
+/*
+ COLOUR PALETTE - http://www.colourlovers.com/palette/1606220/colorful_banaani*/
+/*
+ FONT FOR LOGO - http://www.fontsquirrel.com/fonts/GoodDog*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -56,6 +61,17 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+    font-family: 'GoodDogRegular';
+    src: url('./GoodDog/GoodDog-webfont.eot');
+    src: url('./GoodDog/GoodDog-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./GoodDog/GoodDog-webfont.woff') format('woff'),
+         url('./GoodDog/GoodDog-webfont.ttf') format('truetype'),
+         url('./GoodDog/GoodDog-webfont.svg#GoodDogRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 a { text-decoration: none;}
 body { background-color: #efefef;  font-family: sans-serif; font-size: 130%;}
@@ -64,12 +80,19 @@ body { background-color: #efefef;  font-family: sans-serif; font-size: 130%;}
   margin: 0 auto;
   background-color: #fff;
   min-height: 800px;
-  
+
 }
 header {
   padding: 30px 0;
   border-bottom: 1px solid #ccc;
   position: relative;
+}
+
+a#logo {
+  font-family: 'GoodDogRegular';
+  color: #CF4647;
+  font-size: 48px;
+  padding-left: 20px;
 }
 
 header form#search {
