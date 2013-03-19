@@ -12,8 +12,8 @@
   <h1>digital tomatoes</h1>
 
 
-    <form action="" method="get">
-    <select>
+    <form action="/main/genre" method="get">
+    <select name="genre">
       <% @genres.each do |genre| %>
       <option value="<%= genre.name %>"><%= genre.name %></option>
       <% end %>
