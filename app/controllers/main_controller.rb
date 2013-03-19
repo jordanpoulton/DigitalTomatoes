@@ -11,8 +11,6 @@ class MainController < ApplicationController
   end
 
   def genre
-    #List all podcasts linked to the genre provided in params
-
-     @podcasts = Podcast.joins(:genres).where('genres.name' => params[:genre])
+     @podcasts = Podcast.all(:include => :genres, :conditions => ["genres.name = ?", params[:genre].downcase] )
   end
 end
