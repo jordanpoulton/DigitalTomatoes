@@ -1,3 +1,30 @@
-// Place all the styles related to the main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+div#body_buttons {
+  color: #524658;
+  display: inline-block;
+  border: 5px solid #CF4647;
+  background-color: #e5ddcb;
+  height: 100px;
+  width: 285px;
+  border-radius: 10px;
+  font-family: 'GoodDogRegular';
+  font-size: 2em;
+  margin: 5px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+div#body_buttons_main {
+  color: #524658;
+  display: inline-block;
+  border: 10px solid #CF4647;
+  background-color: #e5ddcb;
+  height: auto;
+  width: auto;
+  border-radius: 20px;
+  font-family: 'GoodDogRegular';
+  font-size: 4em;
+  margin: 20px;
+  text-align: center;
+  padding: 20px;
+  margin-left: 150px
+}

@@ -13,7 +13,7 @@
  */
 
 /*
- COLOUR PALETTE - http://www.colourlovers.com/palette/1606220/colorful_banaani*/
+ COLOUR PALETTE - */
 /*
  FONT FOR LOGO - http://www.fontsquirrel.com/fonts/GoodDog*/
 
@@ -73,8 +73,10 @@ table {
 
 }
 
-a { text-decoration: none;}
-body { background-color: #efefef;  font-family: sans-serif; font-size: 130%;}
+a {
+  text-decoration: none;
+}
+body { background-color: #a7c5bd;  font-family: sans-serif; font-size: 130%;}
 #wrapper {
   width: 960px;
   margin: 0 auto;
@@ -83,45 +85,57 @@ body { background-color: #efefef;  font-family: sans-serif; font-size: 130%;}
 
 }
 header {
-  padding: 30px 0;
+  padding: 20px 0;
   border-bottom: 1px solid #ccc;
   position: relative;
+  background-color: #CF4647;
 }
 
 a#logo {
   font-family: 'GoodDogRegular';
-  color: #CF4647;
+  color: #fff;
   font-size: 48px;
   padding-left: 20px;
 }
 
 header form#search {
-  position: absolute;
-  right: 200px;
+  display: inline;
+  margin-left: 50px;
 }
 
 header form#genres {
-  position: absolute;
-  left: 300px;
+  display: inline;
+  margin-left: 50px;
 }
 
 header h1, header form, header div#account {
   display: inline;
 }
 
-header div#account {
-  position: absolute;
-  right: 10px;
+div#account {
+  font-family: 'GoodDogRegular';
+  font-size: 2em;
+  margin-left: 70px;
 }
 
-footer ul {
+.footer ul {
   width: 260px;
   float: left;
   text-align: center;
+  color: #fff;
+  font-family: 'GoodDogRegular';
+  margin-left: 50px;
 }
 
-footer {
+
+
+.footer {
   padding-top: 30px;
   display: hidden;
-
+  background-color: #CF4647;
+  height: 50px;
 }
+
+
+
+
