@@ -4,7 +4,7 @@
   <li> <%= @podcast.body %></li>
   <li> <%= @podcast.image %></li>
   <li> <%= @podcast.url %></li>
-  <li> <%= @podcast.rating %></li>
+  <li>rating:  <%= @rating%> %</li>
 </ul>
 
 <h3> Genres </h3>
@@ -14,13 +14,13 @@
   <%end%>
 </ul>
 <% if current_user? %>
-<%= render 'reviews/form' %>
+  <%= render 'reviews/form' %>
 <% else %>
   <div><p><%= link_to "log in", '/login' %> to leave a review</p></div>
 <% end %>
 <ul>
 <% @reviews.each do |review| %>
-  <li><%= review.body %></li>
+  <li><%= review.body %> rating: <%= review.rating.to_s%></li>
 <% end %>
 </ul>
 

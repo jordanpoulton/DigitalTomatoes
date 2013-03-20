@@ -22,6 +22,10 @@ class ApplicationController < ActionController::Base
 
   end
 
+  def check_logged_in
+    redirect_to( new_session_path, :notice => "You must be logged on or create a new account to do this ") unless current_user?
+  end
+
 
 
   def get_genres

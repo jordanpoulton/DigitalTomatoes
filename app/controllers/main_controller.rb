@@ -1,7 +1,6 @@
 class MainController < ApplicationController
   def index
-
-
+    @latest_podcasts = Podcast.limit(10).reverse
   end
 
   def contact

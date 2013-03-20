@@ -1,4 +1,5 @@
 class PodcastsController < ApplicationController
+  before_filter :check_logged_in, :only => [:new]
 
   def index
     @podcasts = Podcast.all
@@ -6,6 +7,7 @@ class PodcastsController < ApplicationController
 
   def show
     @podcast = Podcast.find(params[:id])
+    @rating = calculate_rating(params[:id])
     @review = Review.new
     @reviews = Review.where("podcast_id = ?", params[:id])
   end
@@ -37,5 +39,17 @@ class PodcastsController < ApplicationController
     @podcast = Podcast.find(params[:id])
     @podcast.destroy
     redirect_to :action => 'index'
+  end
+
+  private
+
+  def calculate_rating(id)
+    all_reviews_array = Review.where("podcast_id = ?", id)
+
+    reviews_count = all_reviews_array.count
+    reviews_ratings_tally =0
+    all_reviews_array.each {|review| reviews_ratings_tally += review.rating}
+    reviews_ratings_tally *= 10
+    reviews_ratings_tally /= reviews_count
   end
 end

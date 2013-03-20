@@ -1,5 +1,11 @@
-<div id="body_buttons_main"><%= link_to "Get Podcast reviewed", "" %></div>
+<div id="body_buttons_main"><%= link_to "Get Podcast reviewed", new_podcast_path %></div>
 
-<div class="body_buttons"><%= link_to "Top Podcasts", "" %></div>
-<div class="body_buttons"><%= link_to "Browse genres", "" %></div>
-<div class="body_buttons"><%= link_to "Create Review" "" %></div>
+
+<div class="body_buttons">
+  <h1>latest podcasts</h1>
+<% @latest_podcasts.each do |podcast| %>
+  <li><%= link_to podcast.name, podcast_path(podcast.id) %></li>
+<% end %>
+</div>
+
+<div class="body_buttons"><%= link_to "Create Review", "" %></div>

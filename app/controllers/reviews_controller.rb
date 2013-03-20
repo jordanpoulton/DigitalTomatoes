@@ -10,6 +10,7 @@ class ReviewsController < ApplicationController
     @review.body= params[:review][:body]
     @review.user_id=params[:user_id]
     @review.podcast_id=params[:podcast_id]
+    @review.rating=params[:rating]
     @review.save
     redirect_to podcast_path(params[:podcast_id])
 

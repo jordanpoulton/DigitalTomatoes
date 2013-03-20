@@ -4,6 +4,11 @@
     <%= f.text_field :body %>
     </div>
 
+    <select name="rating">
+      <% 0.upto(10) do |n| %>
+      <option value="<%= n %>"><%= n %></option>
+      <% end %>
+    </select>
     <input type="hidden" name="user_id" value="<%= session[:user_id] %>">
     <input type="hidden" name="podcast_id" value="<%= params[:id] %>">
 
