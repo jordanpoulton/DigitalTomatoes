@@ -7,6 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-["Arts", "Business", "Comedy", "Education", "Games/Hobbies", "Government/Orgs", "Health", "Kids/Family", "Music", "News/Politics", "Religion/Spirit", "Science/Medicine", "Society/Culture", "Sports/Recreation", "TV/Film", "Technology" ].each {|x| Genre.create(:name=> x)}
+["arts", "business", "comedy", "education", "games/hobbies", "government/orgs", "health", "kids/family", "music", "news/politics", "religion/spirit", "science/medicine", "society/culture", "sports/recreation", "tv/film", "technology" ].each {|x| Genre.create(:name=> x)}
 
-# Podcast.new

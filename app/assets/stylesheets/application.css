@@ -113,7 +113,6 @@ header h1, header form, header div#account {
 }
 
 div#account {
-  font-family: 'GoodDogRegular';
   font-size: 2em;
   margin-left: 70px;
 }
@@ -123,7 +122,6 @@ div#account {
   float: left;
   text-align: center;
   color: #fff;
-  font-family: 'GoodDogRegular';
   margin-left: 50px;
 }
 

@@ -1,9 +1,11 @@
-  <%= form_for @review do |f| %>
+  <%= form_for @review, :url => podcast_reviews_path(@podcast) do |f| %>
     <div>
-    <%= f.label :name %>:
-    <%= f.text_field :name %>
+    <%= f.label :body %>:
+    <%= f.text_field :body %>
     </div>
-    <%= f.submit %>
-    <input type="hidden" name="user_id" value="<%= current_user.id %>">
+
+    <input type="hidden" name="user_id" value="<%= session[:user_id] %>">
     <input type="hidden" name="podcast_id" value="<%= params[:id] %>">
+
+    <%= f.submit %>
   <% end %>

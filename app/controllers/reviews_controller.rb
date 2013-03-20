@@ -6,6 +6,14 @@ class ReviewsController < ApplicationController
   end
 
   def create
+    @review = Review.new
+    @review.body= params[:review][:body]
+    @review.user_id=params[:user_id]
+    @review.podcast_id=params[:podcast_id]
+    @review.save
+    redirect_to podcast_path(params[:podcast_id])
+
+
     # @review = Review.create(params[:review])
     # review comes from params
     # podcast comes from params (as it's created on podcast page)

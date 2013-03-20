@@ -13,6 +13,14 @@
   <li><%=genre.name%></li>
   <%end%>
 </ul>
-
-
+<% if current_user? %>
+<%= render 'reviews/form' %>
+<% else %>
+  <div><p><%= link_to "log in", '/login' %> to leave a review</p></div>
+<% end %>
+<ul>
+<% @reviews.each do |review| %>
+  <li><%= review.body %></li>
+<% end %>
+</ul>
 

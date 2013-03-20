@@ -1,5 +1,5 @@
+<h1> <%= "Browse #{params[:genre]} podcasts " %> </h1>
 
-<h1><%= params[:genre] %></h1>
 <ul>
 <% @podcasts.each do |podcast| %>
 	<li><%= podcast.name %></li>
