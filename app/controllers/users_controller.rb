@@ -18,11 +18,10 @@ class UsersController < ApplicationController
 
       @user = User.new
       @user.name = params[:user][:name]
-      @user.email = params[:user][:email]
+      @user.email = params[:user][:email].downcase
 
-      hashed_password = Digest::SHA1.hexdigest params[:user][:password]
       @user.salt = Digest::SHA1.hexdigest Time.now.to_s
-      salted = hashed_password << @user.salt
+      salted = params[:user][:password].to_s << @user.salt
       @user.password = Digest::SHA1.hexdigest salted
 
       @user.save

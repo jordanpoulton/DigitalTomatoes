@@ -27,12 +27,16 @@
   </form>
 
   <div id="account">
-    <a href="">login</a><a href="">join</a>
+    <% if current_user? %>
+      <%= link_to "Logout", '/logout' %>
+    <% else %>
+      <%= link_to "Login", '/login' %>
+      <%= link_to "Join", '/join'%>
+    <%end%>
   </div>
 </header>
 
 <%= yield %>
-
 <footer class="footer">
   <ul>
     <li><%= link_to "Contact Us", '/contact' %></li>
@@ -43,6 +47,7 @@
   <ul>
     <li><a href="">copyright</a></li>
   </ul>
+  <div id="sessions_inspect"><%= session.inspect %></div>
 </footer>
 </div>
 </body>

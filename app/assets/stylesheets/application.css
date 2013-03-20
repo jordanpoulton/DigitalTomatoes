@@ -134,8 +134,15 @@ div#account {
   display: hidden;
   background-color: #CF4647;
   height: 50px;
+  min-height: 100px;
 }
 
+#sessions_inspect  {
+  border: 1px solid #a7c5bd;
+  clear:both;
+  margin: 15px;
+  padding: 20px;
+}
 
 
 

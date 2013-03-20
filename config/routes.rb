@@ -7,6 +7,9 @@ DigitalTomatoes::Application.routes.draw do
   match '/about' => 'main#about'
   match '/genre' => 'main#genre'
   match '/search' => 'main#search'
+  match '/login' => 'sessions#new'
+  match '/join' => 'users#new'
+  match 'logout' => 'sessions#destroy'
 
   resources :podcasts do
     resources :reviews

@@ -8,9 +8,7 @@ class User < ActiveRecord::Base
   def self.authenticate(email, password)
     user = find_by_email email
 
-    hashed_password = Digest::SHA1.hexdigest password
-
-    salted = hashed_password << user.salt
+    salted = password << user.salt
 
     user_password = Digest::SHA1.hexdigest salted
 

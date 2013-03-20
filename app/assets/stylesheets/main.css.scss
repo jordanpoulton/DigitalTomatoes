@@ -1,4 +1,4 @@
-div#body_buttons {
+div.body_buttons {
   color: #524658;
   display: inline-block;
   border: 5px solid #CF4647;
@@ -6,7 +6,6 @@ div#body_buttons {
   height: 100px;
   width: 285px;
   border-radius: 10px;
-  font-family: 'GoodDogRegular';
   font-size: 2em;
   margin: 5px;
   text-align: center;
@@ -21,8 +20,7 @@ div#body_buttons_main {
   height: auto;
   width: auto;
   border-radius: 20px;
-  font-family: 'GoodDogRegular';
-  font-size: 4em;
+  font-size: 3em;
   margin: 20px;
   text-align: center;
   padding: 20px;

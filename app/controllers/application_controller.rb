@@ -3,7 +3,11 @@ class ApplicationController < ActionController::Base
 
   before_filter :get_genres
 
-  private
+  helper_method :current_user?
+
+  def current_user?
+    !!current_user
+  end
 
   def current_user
     @current_user ||= session[:user_id] &&
@@ -17,6 +21,8 @@ class ApplicationController < ActionController::Base
     # end
 
   end
+
+
 
   def get_genres
     @genres = Genre.all.sort
