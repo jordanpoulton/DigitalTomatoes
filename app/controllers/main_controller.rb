@@ -11,5 +11,7 @@ class MainController < ApplicationController
 
   def genre
      @podcasts = Podcast.all(:include => :genres, :conditions => ["genres.name = ?", params[:genre].downcase] )
+     # More restful you should be, young padowan
   end
 end
+

@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
 
   has_many :reviews
 
+  validates :name, :presence => true
+  validates :email, :presence => true
+
+
   def self.authenticate(email, password)
     user = find_by_email email
 

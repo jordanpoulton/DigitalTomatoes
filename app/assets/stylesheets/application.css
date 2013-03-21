@@ -76,7 +76,7 @@ table {
 a {
   text-decoration: none;
 }
-body { background-color: #a7c5bd;  font-family: sans-serif; font-size: 130%;}
+body { background-color: #a7c5bd;  font-family: sans-serif; font-size: 100%;}
 #wrapper {
   width: 960px;
   margin: 0 auto;
@@ -113,10 +113,10 @@ header h1, header form, header div#account {
 }
 
 div#account {
-  font-size: 2em;
+  font-size: 1em;
   margin-left: 70px;
 }
-
+div#account a { color: #fff; }
 .footer ul {
   width: 260px;
   float: left;
@@ -135,6 +135,7 @@ div#account {
   min-height: 100px;
 }
 
+.footer a { color: #fff;}
 #sessions_inspect  {
   border: 1px solid #a7c5bd;
   clear:both;
@@ -142,5 +143,10 @@ div#account {
   padding: 20px;
 }
 
-
+div#body_buttons_main {
+  background-color: #e5ddcb;
+  padding: 10px 0;
+  font-size: 2em;
+  text-align: center;
+}
 

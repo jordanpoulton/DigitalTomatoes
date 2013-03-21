@@ -3,7 +3,7 @@ div.body_buttons {
   display: inline-block;
   border: 5px solid #CF4647;
   background-color: #e5ddcb;
-  height: 100px;
+  height: auto;
   width: 285px;
   border-radius: 10px;
   font-size: 2em;
@@ -12,17 +12,4 @@ div.body_buttons {
   padding-top: 50px;
 }
 
-div#body_buttons_main {
-  color: #524658;
-  display: inline-block;
-  border: 10px solid #CF4647;
-  background-color: #e5ddcb;
-  height: auto;
-  width: auto;
-  border-radius: 20px;
-  font-size: 3em;
-  margin: 20px;
-  text-align: center;
-  padding: 20px;
-  margin-left: 150px
-}
+

@@ -1,4 +1,19 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+# # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+# Podcast1:
+#   id: 1
+#   name: The Jordan Show
+#   body: The greatest show on earth
+#   image:
+#   url: www.jordanpoulton.com
+#   rating:
+
+# Podcast2:
+#   name: The Rob Show
+#   body: Almost the greatest show on earth
+#   image:
+#   url: www.robthelegend.com
+#   rating:
 
 # one:
 #   name: MyString

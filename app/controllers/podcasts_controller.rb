@@ -1,5 +1,5 @@
 class PodcastsController < ApplicationController
-  before_filter :check_logged_in, :only => [:new]
+  before_filter :check_logged_in, :only => [:new, :create]
 
   def index
     @podcasts = Podcast.all
@@ -50,6 +50,10 @@ class PodcastsController < ApplicationController
     reviews_ratings_tally =0
     all_reviews_array.each {|review| reviews_ratings_tally += review.rating}
     reviews_ratings_tally *= 10
-    reviews_ratings_tally /= reviews_count
+    if reviews_count == 0
+      return "No ratings yet"
+    else
+      reviews_ratings_tally /= reviews_count
+    end
   end
 end
