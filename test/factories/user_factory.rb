@@ -17,6 +17,8 @@ class UserFactory
     def user_without_password
       User.new(:name => "Jordan", :email => "j@j.com")
     end
+
+
   end
 end
 

@@ -75,25 +75,32 @@ table {
 
 a {
   text-decoration: none;
+  color: #506270;
 }
-body { background-color: #a7c5bd;  font-family: sans-serif; font-size: 100%;}
+h1, h1, h3 { color: #506270;}
+body {
+  #background-color: #a7c5bd;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
+}
+
 #wrapper {
   width: 960px;
   margin: 0 auto;
   background-color: #fff;
   min-height: 800px;
-
 }
+
 header {
   padding: 20px 0;
   border-bottom: 1px solid #ccc;
   position: relative;
-  background-color: #CF4647;
+  #background-color: #CF4647;
 }
 
 a#logo {
   font-family: 'GoodDogRegular';
-  color: #fff;
+  color: #952637;
   font-size: 48px;
   padding-left: 20px;
 }
@@ -116,26 +123,28 @@ div#account {
   font-size: 1em;
   margin-left: 70px;
 }
-div#account a { color: #fff; }
+div#account a { color: #506270; }
 .footer ul {
   width: 260px;
   float: left;
   text-align: center;
-  color: #fff;
+  #color: #fff;
   margin-left: 50px;
 }
 
 
 
 .footer {
+  margin-top: 30px;
+  border-top: 1px solid #999;
   padding-top: 30px;
   display: hidden;
-  background-color: #CF4647;
+  #background-color: #CF4647;
   height: 50px;
   min-height: 100px;
 }
 
-.footer a { color: #fff;}
+.footer a { #color: #fff;}
 #sessions_inspect  {
   border: 1px solid #a7c5bd;
   clear:both;
@@ -144,9 +153,197 @@ div#account a { color: #fff; }
 }
 
 div#body_buttons_main {
-  background-color: #e5ddcb;
+  #background-color: #e5ddcb;
   padding: 10px 0;
   font-size: 2em;
   text-align: center;
 }
 
+div.body_buttons {
+  #color: #524658;
+  display: inline-block;
+  #border: 5px solid #CF4647;
+  #background-color: #e5ddcb;
+  height: auto;
+  width: 285px;
+  #border-radius: 10px;
+  font-size: 2em;
+  margin: 5px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+div.body_buttons ul {
+  list-style: none;
+}
+
+div#latest {
+
+  position: relative;
+  margin: 20px auto;
+  background-color: #efefef;
+}
+
+div#latest h1 {
+  font-weight: 400;
+  font-size: 38px;
+  letter-spacing: -2px;
+  position: relative;
+  top: 40px;
+  left: 60px;
+}
+
+div#latest_content {
+  position: relative;
+  top: 60px;
+  left: 60px;
+  min-height: 400px;
+}
+
+div#latest_content p {
+  width: 400px;
+  line-height: 1.5em;
+  padding-top: 0.5em;
+}
+
+img#latest {
+  background-color: #999;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+}
+
+
+iframe#show_player {
+  position: relative;
+  left: 510px;
+  top: -80px;
+}
+
+img#show_latest {
+  background-color: #999;
+  position: absolute;
+  right: 50px;
+  top: 110px;
+}
+
+
+iframe#player {
+  position: relative;
+  left: 510px;
+  top: -100px;
+}
+
+#podcast_gallery {
+  overflow: hidden;
+}
+
+#podcast_gallery h1 {
+  padding: 20px 0 20px 10px;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: -2px;
+}
+
+#podcast_gallery ul li {
+  width: 220px;
+  height: 140px;
+  background-color: #ccc;
+  float: left;
+  margin: 10px;
+  position: relative;
+}
+
+#podcast_gallery ul li a {
+  background: rgba(255, 255, 255, .75);
+  padding: 10px;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  z-index: 10;
+  font-weight: 300;
+}
+
+a#create_review {
+  display: block;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #666;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+}
+
+div#stats{
+  display: block;
+  padding: 20px 0;
+  background-color: #666;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+}
+
+div#stats span { position: relative; float: left; left: 40px;}
+div#stats ul { position: relative; float: left; left: 120px;}
+
+div#stats li { display: inline; padding-right: 20px;}
+
+#podcast_gallery ul li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div#log-in-notice {
+  width: 100%;
+  background-color: #FFFFCC;
+  margin: 10px 0 ;
+  padding: 20px 0;
+  text-align: center;
+}
+
+ul#reviews { margin-top: 30px; }
+
+ul#reviews li {
+  padding: 20px;
+  border-bottom: 1px solid #efefef;
+  color: #666;
+}
+
+ul#reviews:last-child { border-bottom: 1px solid #fff; }
+
+span#rating { float: right; }
+
+form#review_form {
+  margin: 10px 0;
+  padding: 20px;
+  background-color: #666;
+  color: #fff;
+  overflow: hidden;
+}
+
+form#review_form label {
+  display: block;
+  width: 100%;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+form#review_form textarea { width: 560px; height: 140px; }
+
+form#review_form h2, form#review_form select { float: left; margin-right: 30px;}
+
+div#form_rating_input { margin: 20px 0 40px 0; overflow: hidden; position: relative; top: 20px; left: 20px;}
+
+div#column { width: 580px; float: left; }
+div#column2 { width: 200px; float: left; }
+
+div#submit { position: relative; top: 20px; left: 30px; }

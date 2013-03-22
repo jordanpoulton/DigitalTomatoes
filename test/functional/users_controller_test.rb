@@ -15,6 +15,17 @@ class UsersControllerTest < ActionController::TestCase
     post :create, {:user => {:name => user.name, :password => user.password, :confirm_password => user.password}}
     assert_template :new
   end
+
+  test "test for password presence when creating new user" do
+    user = UserFactory.user_without_password
+    post :create, {:user => {:name => user.name, :email => user.email }}
+    assert_template :new
+  end
+
+
+
+
+
   # test "should get index" do
   #   get :index
   #   assert_response :success
